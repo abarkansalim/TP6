@@ -2,5 +2,11 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
-    <bean id="controller" class="cigma.pfe.controllers.ClientController" scope="prototype"/>
+    <bean id="controller" class="cigma.pfe.controllers.ClientController" scope="prototype">
+        <property name="clientService" ref="service"/>
+    </bean>
+
+    <bean id="service"
+          class="cigma.pfe.services.ClientServiceImpl"
+          scope="prototype"/>
 </beans>
