@@ -3,7 +3,7 @@
 
 <beans>
     <bean id="controller" class="cigma.pfe.controllers.ClientController" scope="prototype">
-        <property name="clientService" ref="service"/>
+        <constructor-arg ref="service"/>
     </bean>
 
     <bean id="service"

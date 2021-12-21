@@ -5,7 +5,8 @@ import cigma.pfe.services.IClientService;
 
 public class ClientController {
     IClientService clientService;
-    public void setClientService(IClientService clientService) {
+    public ClientController(IClientService clientService) {
+        System.out.println("Call ClientController with clientService param....");
         this.clientService = clientService;
     }
 
