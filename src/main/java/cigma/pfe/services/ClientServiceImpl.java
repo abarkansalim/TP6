@@ -1,11 +1,14 @@
 package cigma.pfe.services;
 
 import cigma.pfe.models.Client;
-import cigma.pfe.repositories.ClientRepositoryImpl;
 import cigma.pfe.repositories.IClientRepository;
 
 public class ClientServiceImpl implements IClientService{
-    IClientRepository clientRepository = new ClientRepositoryImpl();
+    IClientRepository clientRepository ;
+    public ClientServiceImpl(IClientRepository clientRepository) {
+        System.out.println("Call ClientServiceImpl with ClientRepository param....");
+        this.clientRepository = clientRepository;
+    }
 
     public ClientServiceImpl() {
         System.out.println("Call ClientServiceImpl ....");
